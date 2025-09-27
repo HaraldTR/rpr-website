@@ -20,25 +20,6 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm">
-      {/* Top bar with contact info */}
-      <div className="bg-gray-50 border-b border-gray-200 py-2">
-        <div className="container flex justify-between items-center text-sm">
-          <div className="flex items-center gap-6">
-            <a href="tel:92486555" className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-              <Phone size={14} />
-              <span>924 86 555</span>
-            </a>
-            <a href="mailto:post@rpr.no" className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-              <Mail size={14} />
-              <span>post@rpr.no</span>
-            </a>
-          </div>
-          <div className="hidden md:block text-xs text-gray-500">
-            Org.nr: NO 911 678 462 MVA
-          </div>
-        </div>
-      </div>
-
       {/* Main navigation */}
       <nav className="relative">
         <div className="container">

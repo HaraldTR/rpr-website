@@ -125,9 +125,9 @@ export default function Home() {
 
       {/* Why Choose Us Section */}
       <section className="section bg-gray-50">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold mb-4">
+        <div className="container text-center">
+          <div className="max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl font-serif font-bold mb-4">
               Hvorfor velge Rieber Prosjekt AS
             </h2>
             <p className="text-lg text-gray-600">
@@ -137,8 +137,8 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <Shield size={36} className="text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-3">
@@ -150,8 +150,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <Award size={36} className="text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-3">
@@ -163,8 +163,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <Users size={36} className="text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-3">
