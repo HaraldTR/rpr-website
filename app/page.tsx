@@ -1,103 +1,199 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { ArrowRight, Shield, Award, Users, CheckCircle } from 'lucide-react';
+
+const services = [
+  {
+    title: 'Bygningsakustikk',
+    description: 'Prosjektering av lydforhold i bygninger med fokus på lydisolasjon, romakustikk og vibrasjonsdempning.',
+    features: ['Boliger', 'Kontorbygg', 'Kulturbygg', 'Undervisningsbygg'],
+    href: '/bygningsakustikk',
+  },
+  {
+    title: 'Støykartlegging',
+    description: 'Kartlegging og analyse av støy fra industri, veitrafikk, jernbane og andre støykilder.',
+    features: ['Industristøy', 'Trafikkstøy', 'Bygge- og anleggsstøy', 'Støymålinger'],
+    href: '/stoykartlegging',
+  },
+  {
+    title: 'Reguleringsplaner',
+    description: 'Utredninger og rapporter for reguleringsplaner med vurdering av støyforhold og akustiske tiltak.',
+    features: ['Støyutredninger', 'Konsekvensanalyser', 'Tiltaksplaner', 'Planbestemmelser'],
+    href: '/reguleringsplaner',
+  },
+  {
+    title: 'Skytebaner',
+    description: 'Spesialkompetanse på støy fra skytebaner med målinger, beregninger og tiltaksforslag.',
+    features: ['Støyberegninger', 'Støymålinger', 'Tiltaksplaner', 'Naboforhold'],
+    href: '/skytebaner',
+  },
+];
+
+const credentials = [
+  'Sentral godkjenning tiltaksklasse 3',
+  'Prosjektering av lydforhold og vibrasjoner',
+  'Medlem av Norsk Akustisk Selskap',
+  'Over 30 års erfaring',
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-20">
+        <div className="container">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-white">
+              Rådgivende ingeniører i akustikk
+            </h1>
+            <p className="text-xl mb-8 text-gray-200">
+              Rieber Prosjekt AS leverer spesialiserte konsulenttjenester innen akustikk,
+              støykartlegging og vibrasjoner. Med over 30 års erfaring og sentral godkjenning
+              i tiltaksklasse 3, sikrer vi optimale lydforhold for deres prosjekter.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/kontakt" className="btn bg-accent hover:bg-accent-dark border-accent hover:border-accent-dark">
+                Ta kontakt
+              </Link>
+              <Link href="/om-oss" className="btn btn-outline text-white border-white hover:bg-white hover:text-primary">
+                Les mer om oss
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Credentials Bar */}
+      <section className="bg-accent py-6">
+        <div className="container">
+          <div className="flex flex-wrap justify-center gap-8 text-sm font-medium text-primary-dark">
+            {credentials.map((credential, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <CheckCircle size={18} />
+                <span>{credential}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="section">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl font-serif font-bold mb-4">
+              Våre tjenester
+            </h2>
+            <p className="text-lg text-secondary">
+              Vi tilbyr omfattende rådgivningstjenester innen akustikk og støy,
+              tilpasset deres spesifikke behov og prosjektkrav.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="card hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-serif font-bold mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-secondary mb-4">
+                  {service.description}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-sm">
+                      <CheckCircle size={16} className="text-accent flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={service.href}
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium"
+                >
+                  Les mer <ArrowRight size={18} />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="section bg-surface">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl font-serif font-bold mb-4">
+              Hvorfor velge Rieber Prosjekt AS
+            </h2>
+            <p className="text-lg text-secondary">
+              Vi kombinerer faglig ekspertise med praktisk erfaring for å levere
+              løsninger som møter både tekniske krav og praktiske behov.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Shield size={32} className="text-accent" />
+              </div>
+              <h3 className="text-xl font-serif font-bold mb-3">
+                Godkjent kompetanse
+              </h3>
+              <p className="text-secondary">
+                Sentral godkjenning i tiltaksklasse 3 for prosjektering av lydforhold
+                og vibrasjoner sikrer kvalitet og kompetanse.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Award size={32} className="text-accent" />
+              </div>
+              <h3 className="text-xl font-serif font-bold mb-3">
+                Lang erfaring
+              </h3>
+              <p className="text-secondary">
+                Over 30 års erfaring med komplekse akustiske utfordringer gir oss
+                unik innsikt og løsningsorientert tilnærming.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Users size={32} className="text-accent" />
+              </div>
+              <h3 className="text-xl font-serif font-bold mb-3">
+                Helhetlig tilnærming
+              </h3>
+              <p className="text-secondary">
+                Vi ser akustiske forhold i sammenheng med andre tekniske disipliner
+                for å oppnå helhetlige gode løsninger.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-primary text-white py-16">
+        <div className="container text-center">
+          <h2 className="text-3xl font-serif font-bold mb-4 text-white">
+            La oss hjelpe deg med ditt neste prosjekt
+          </h2>
+          <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+            Kontakt oss for en uforpliktende samtale om hvordan vi kan bidra
+            til å sikre optimale akustiske forhold i deres prosjekt.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/kontakt" className="btn bg-accent hover:bg-accent-dark border-accent hover:border-accent-dark">
+              Kontakt oss
+            </Link>
+            <a href="tel:92486555" className="btn btn-outline text-white border-white hover:bg-white hover:text-primary">
+              Ring 924 86 555
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
