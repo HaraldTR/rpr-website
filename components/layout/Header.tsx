@@ -19,22 +19,22 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-surface border-b border-border">
+    <header className="bg-white shadow-sm">
       {/* Top bar with contact info */}
-      <div className="bg-primary text-white py-2">
+      <div className="bg-gray-50 border-b border-gray-200 py-2">
         <div className="container flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:92486555" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="tel:92486555" className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
               <Phone size={14} />
               <span>924 86 555</span>
             </a>
-            <a href="mailto:post@rpr.no" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="mailto:post@rpr.no" className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
               <Mail size={14} />
               <span>post@rpr.no</span>
             </a>
           </div>
-          <div className="hidden md:block text-xs">
-            NO 911 678 462 MVA
+          <div className="hidden md:block text-xs text-gray-500">
+            Org.nr: NO 911 678 462 MVA
           </div>
         </div>
       </div>
@@ -46,10 +46,10 @@ export default function Header() {
             {/* Logo/Company name */}
             <Link href="/" className="flex items-center">
               <div>
-                <h1 className="text-2xl font-serif font-bold text-primary m-0">
+                <h1 className="text-2xl font-bold text-primary m-0 whitespace-nowrap">
                   Rieber Prosjekt AS
                 </h1>
-                <p className="text-xs text-secondary mt-1">
+                <p className="text-xs text-gray-500 mt-0.5 whitespace-nowrap">
                   Rådgivende ingeniører i akustikk
                 </p>
               </div>
@@ -57,12 +57,12 @@ export default function Header() {
 
             {/* Desktop navigation */}
             <div className="hidden lg:flex items-center">
-              <ul className="flex gap-8">
+              <ul className="flex gap-1">
                 {navigation.map((item) => (
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-text hover:text-primary transition-colors font-medium"
+                      className="px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-all font-medium rounded-md whitespace-nowrap"
                     >
                       {item.name}
                     </Link>

@@ -45,7 +45,7 @@ export default function ReguleringsplanerPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-16">
+      <section className="bg-primary text-white py-16">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-white">
